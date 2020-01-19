@@ -11,7 +11,7 @@
     <title>PassWord Maker ✌ </title>
   </head>
   <body>
-    <div class="container, hide">
+    <div class="container" id = 'hide'>
         <div class="row">
             <div class="col-sm-3">
               <!-- blank divs -->
@@ -76,15 +76,16 @@
         </div>   
      </div>
 
-  <!-- Modal -->
+  <!------------------------------------------ Modal -------------------------------------------------------------->
   <div class="container" id ='modal'>
-    <div class="row">
+    <div class="row, center">
     <h1>Please Select your Criteria</h1>
+    <label>Please Enter desired password length </label>
     </div>
     <div class="row">
       <div class="col-sm-2">
-        <label>Please Enter desired password length</label>
-        <textarea id = "length" class="form-control rounded-0" rows="1">   </textarea>
+        
+      <input type="number" class="form-control" id = "length" placeholder="8-128" aria-label="Username" aria-describedby="basic-addon1">
       </div>
     
     </div>
