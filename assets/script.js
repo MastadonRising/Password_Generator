@@ -6,15 +6,10 @@ var modal = document.getElementById('modal')
 var length = document.getElementById('length')
 var password = document.getElementById('password')
 var critera = document.getElementById('criteria')
+var charecters = ['0123456789','abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~',' '] 
+var charset = ''
 
 
-critera.addEventListener("click", function(event){
- event.preventDefault()
-alert(event.target)
-var el = event.target
-alert(el.id)
- 
-})
 
 // brings up the critera screen
 initbtn.addEventListener("click", function(event){
@@ -22,8 +17,14 @@ initbtn.addEventListener("click", function(event){
  hide.style.setProperty("display", 'none')
  modal.style.setProperty('display','block')
 } )
-
-
+// select characters 
+critera.addEventListener("click", function(event){
+    event.preventDefault()
+   alert(event.target)
+   var el = event.target
+   alert(el.id)
+    
+   })
 
 
 // make the password
@@ -31,14 +32,7 @@ finalbtn.addEventListener("click", function(event){
    var passwordlen = parseInt(length.value)
    var passwordOmega = ''
 
-   var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-   var lowercase = 'abcdefghijklmnopqrstuvwxyz';
-   var numbers = '0123456789';
-   var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
-
-   var charset = uppercase + lowercase + numbers + symbols;
-
-    if (passwordlen < 8 || passwordlen> 128 ) {alert('please choose a length between 8 and 128')}
+    if (passwordlen < 8 || passwordlen> 128 || length.value === '' ) {alert('please choose a length between 8 and 128')}
     else {
     event.preventDefault()
     for (i=0;i< passwordlen; i++){

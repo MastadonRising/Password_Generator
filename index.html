@@ -91,17 +91,37 @@
     </div>
     <div class="row">
     <ol id ='criteria'>
-      <li>Numbers</li><button class="btn btn-info" id = '0'>Utilize</button>
-      <li>Lower case </li><button class="btn btn-info" id = '1'>Utilize</button>
-      <li>Upper case </li><button class="btn btn-info" id = '2' >Utilize</button>
-      <li>ASCII symbols </li><button class="btn btn-info" id ='3'>Utilize </button>
-      <li>Blank Spaces </li><button class="btn btn-info" id ='4' >Utilize</button>
-    </ol b>
+      <div class="custom-control custom-switch" id = '0'>
+        <input type="checkbox" class="custom-control-input" id="0" checked>
+        <label class="custom-control-label" for="customSwitch1" >Numbers</label>
+      </div>
+      <div class="custom-control custom-switch" id="1">
+        <input type="checkbox" class="custom-control-input"  checked>
+        <label class="custom-control-label" for="customSwitch1" >Lower case</label>
+      </div>
+      <div class="custom-control custom-switch" id="2">
+        <input type="checkbox" class="custom-control-input"  checked>
+        <label class="custom-control-label" for="customSwitch1" >Upper case</label>
+      </div>
+      <div class="custom-control custom-switch" id="3">
+        <input type="checkbox" class="custom-control-input"  unchecked>
+        <label class="custom-control-label" for="customSwitch1" >ASCII symbols</label>
+      </div>
+      <div class="custom-control custom-switch"  id="4" >
+        <input type="checkbox" class="custom-control-input"unchecked>
+        <label class="custom-control-label" for="customSwitch1" >Blank Spaces</label>
+      </div>
+    </ol>
 
     </div>
-    <div class ="row"> 
-      <button type="button" class="btn btn-success" id = 'finalbtn'>Submit</button>
+    <div>
+      <div class="col-sm-3">
+        <!-- final submit-->
+        <button type="button" class="btn btn-success" id = 'finalbtn'>Submit</button>
     </div>
+    </div>
+   
+   
      </div>
 
 
