@@ -6,8 +6,18 @@ var modal = document.getElementById('modal')
 var length = document.getElementById('length')
 var password = document.getElementById('password')
 var critera = document.getElementById('criteria')
-var charecters = ['0123456789','abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ','!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~',' '] 
-var charset = ''
+var num = document.getElementById("0")
+var low = document.getElementById('1')
+var up = document.getElementById('2')
+var special = document.getElementById('3')
+var empty = document.getElementById('4')
+var numbers ='0123456789'
+var lowercase = 'abcdefghijklmnopqrstuvwxyz'
+var uppercase ='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+var punctuation = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~'
+var blank = ' '
+varcharset = ''
+
 
 
 
@@ -17,14 +27,11 @@ initbtn.addEventListener("click", function(event){
  hide.style.setProperty("display", 'none')
  modal.style.setProperty('display','block')
 } )
-// select characters 
-critera.addEventListener("click", function(event){
-    event.preventDefault()
-   alert(event.target)
-   var el = event.target
-   alert(el.id)
-    
-   })
+
+
+
+
+
 
 
 // make the password
@@ -57,5 +64,4 @@ copybtn.addEventListener("click", function() {
     document.execCommand("copy");   
     alert('You have copied '+  password.value + ' to the clipboard')
        })
-
 
