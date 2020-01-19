@@ -7,16 +7,16 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="assets\style.css">
     <title>PassWord Maker ✌ </title>
   </head>
   <body>
-    <div class="container">
+    <div class="container, hide">
         <div class="row">
             <div class="col-sm-3">
               <!-- blank divs -->
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6, center">
                 <h1>Password Generator</h1>
             </div> 
             <div class="col-sm-3">
@@ -25,11 +25,33 @@
         </div>
         
         <div class="row">
-        <h2>Generate a Password</h2>        
+          <div class="col-sm-3">
+            <!-- blank divs -->
+          </div>
+          <div class="col-sm-6, center">
+            <h2>Generate a Password</h2>   
+          </div> 
+          <div class="col-sm-3">
+           <!-- blank divs -->
+          </div>
+
+        
+        
+        
+
         </div>   
         <div class="row">
-        <!-- Password Generation Space     -->
-        <textarea id = "password"> Your Secure Password   </textarea>
+            <div class="col-sm-3">
+                <!-- blank divs -->
+              </div>
+              <div class="col-sm-6 , center">
+                <!-- Password Generation Space     -->
+                <textarea id = "password"> Your Secure Password   </textarea>
+              </div> 
+              <div class="col-sm-3">
+               <!-- blank divs -->
+              </div>
+             
         </div>   
 
         <!-- Button Space -->
@@ -39,7 +61,7 @@
             </div>
             <div class="col-sm-3">
                 <!-- Generate Password Button-->
-                <button type="button" class="btn btn-success">Generate Password</button>
+                <button type="button" class="btn btn-success" id = 'initbtn'>Generate Password</button>
             </div>
             <div class="col-sm-2">
                     <!-- blank divs -->
@@ -53,6 +75,34 @@
             </div>
         </div>   
      </div>
+
+  <!-- Modal -->
+  <div class="container" id ='modal'>
+    <div class="row">
+    <h1>Please Select your Criteria</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">
+        <label>Please Enter desired password length</label>
+        <textarea id = "length" class="form-control rounded-0" rows="1">   </textarea>
+      </div>
+    
+    </div>
+    <div class="row">
+    <ol>
+      <li>Numbers</li><button class="btn btn-info" id = '0'>Utilize</button>
+      <li>Lower case </li><button class="btn btn-info" id = '1'>Utilize</button>
+      <li>Upper case </li><button class="btn btn-info" id = '2' >Utilize</button>
+      <li>ASCII symbols </li><button class="btn btn-info" id ='3'>Utilize </button>
+      <li>Blank Spaces </li><button class="btn btn-info" id ='4' >Utilize</button>
+    </ol>
+
+    </div>
+    <div class ="row"> 
+      <button type="button" class="btn btn-success" id = 'finalbtn'>Submit</button>
+    </div>
+     </div>
+
 
 <script src="assets\script.js"></script>
   </body>

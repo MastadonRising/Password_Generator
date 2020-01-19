@@ -1,0 +1,10 @@
+#modal{
+    display: none;
+}
+.center{
+    align-content: center;
+    
+}
+.hide{
+    display: block;
+}
