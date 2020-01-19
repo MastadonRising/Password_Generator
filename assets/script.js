@@ -5,9 +5,16 @@ var hide = document.getElementById('hide')
 var modal = document.getElementById('modal') 
 var length = document.getElementById('length')
 var password = document.getElementById('password')
+var critera = document.getElementById('criteria')
 
 
-
+critera.addEventListener("click", function(event){
+ event.preventDefault()
+alert(event.target)
+var el = event.target
+alert(el.id)
+ 
+})
 
 // brings up the critera screen
 initbtn.addEventListener("click", function(event){
@@ -22,14 +29,23 @@ initbtn.addEventListener("click", function(event){
 // make the password
 finalbtn.addEventListener("click", function(event){
    var passwordlen = parseInt(length.value)
+   var passwordOmega = ''
+
+   var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+   var lowercase = 'abcdefghijklmnopqrstuvwxyz';
+   var numbers = '0123456789';
+   var symbols = '!"#$%&\'()*+,-./:;<=>?@^[\\]^_`{|}~';
+
+   var charset = uppercase + lowercase + numbers + symbols;
+
     if (passwordlen < 8 || passwordlen> 128 ) {alert('please choose a length between 8 and 128')}
     else {
-
     event.preventDefault()
-
-
-
-password.value = "new"
+    for (i=0;i< passwordlen; i++){
+        var char = Math.floor(Math.random() * charset.length );
+        passwordOmega += charset.substring(char, char +1);
+    }
+password.value = passwordOmega
 hide.style.setProperty("display", 'block')
 modal.style.setProperty('display','none')
 }})
